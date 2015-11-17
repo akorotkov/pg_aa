@@ -76,8 +76,7 @@ aa_out(PG_FUNCTION_ARGS)
 		setlocale(LC_CTYPE, old_locale);
 		ereport(ERROR,
 				(errcode(ERRCODE_INVALID_PARAMETER_VALUE),
-				 errmsg("error loading png",
-						MAX_METAPHONE_STRLEN)));
+				 errmsg("error loading png")));
 	}
 
 	/* Assume that charater is twice height-elongated */
@@ -91,8 +90,7 @@ aa_out(PG_FUNCTION_ARGS)
 		setlocale(LC_CTYPE, old_locale);
 		ereport(ERROR,
 				(errcode(ERRCODE_INVALID_PARAMETER_VALUE),
-				 errmsg("error creating image",
-						MAX_METAPHONE_STRLEN)));
+				 errmsg("error creating image")));
 	}
 	gdImageCopyResampled(tb, im, 0, 0, 0, 0,
 						 gdImageSX(tb), gdImageSY(tb),
@@ -111,8 +109,7 @@ aa_out(PG_FUNCTION_ARGS)
 		setlocale(LC_CTYPE, old_locale);
 		ereport(ERROR,
 				(errcode(ERRCODE_INVALID_PARAMETER_VALUE),
-				 errmsg("cannot initialize libaa",
-						MAX_METAPHONE_STRLEN)));
+				 errmsg("cannot initialize libaa")));
 	}
 
 	/* Put grayscaled pixels to libaa context */
@@ -173,8 +170,7 @@ caca_out(PG_FUNCTION_ARGS)
 	{
 		ereport(ERROR,
 				(errcode(ERRCODE_INVALID_PARAMETER_VALUE),
-				 errmsg("error loading png",
-						MAX_METAPHONE_STRLEN)));
+				 errmsg("error loading png")));
 	}
 
 	/* Assume that charater is twice height-elongated */

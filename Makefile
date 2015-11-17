@@ -1,7 +1,7 @@
 # pg_aa/Makefile
 
 MODULE_big = pg_aa
-OBJS = pg_aa.o test.o
+OBJS = pg_aa.o
 EXTENSION = pg_aa
 DATA = pg_aa--1.0.sql
 SHLIB_LINK = -lgd -laa -lcaca
